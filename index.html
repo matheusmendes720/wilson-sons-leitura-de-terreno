@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Leitura de terreno da Wilson Sons a partir de fontes públicas, com seis costuras de processo e dados pós-M&A, e uma proposta de 90 dias. Nenhum sistema da companhia foi acedido ou testado.">
+<title>Leitura de terreno — Wilson Sons · Leitura de terreno</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="">
+<div class="shell">
+<header class="masthead">
+  <p class="eyebrow">Wilson Sons · leitura de terreno · 27 de novembro de 2026</p>
+  <h1>Onde a companhia tem costuras — e o que um Key User do CLS faz com elas</h1>
+  <p class="lede">Documento de candidatura produzido a partir de <b>fontes públicas</b> (arquivo de RI, CVM, B3, laudo Apsis, BNDES, Receita Federal, Siscomex, CGIBS, MDIC/Camex e quadros de recrutamento). Nenhum sistema da companhia foi acedido, testado ou observado. Onde o texto é inferência, está marcado como tal.</p>
+  <nav class="toc">
+    <a href="index.html" aria-current="page">Leitura de terreno</a>
+    <a href="para-encaminhar.html">Resumo para encaminhar</a>
+    <a href="diagnostico.html">As costuras</a>
+    <a href="plano.html">A proposta</a>
+    <a href="evidencia.html">Dados e limites</a>
+    <a href="metodo.html">O método</a>
+  </nav>
+</header>
+<main>
+<p class="readbar">
+  <span class="chip rh">Leitura de 30 s</span>
+  <span class="chip g">Gestor · 3 min</span>
+  <span class="chip t">Técnico · 15 min</span>
+  <span><b>Marcadores:</b></span>
+  <span class="marker f">facto verificado</span>
+  <span class="marker i">inferência</span>
+  <span class="marker s">sem base</span>
+</p>
+
+<section>
+  <p class="section-kicker">A proposta em três linhas</p>
+  <h2>O que este documento é</h2>
+
+  <div class="callout">
+    <p class="lbl">Em três linhas</p>
+    <p>A Wilson Sons comprou-se a si mesma em 2025 — 56,39% → 68,39% do capital, por R$ 17,50/ação — e
+   um investidor de infraestrutura comprou o controlo. O Terminal de Salvador recebeu R$ 848 milhões do
+   BNDES e vai passar de
+    553 mil para mais de 1 milhão de TEU por ano. <b>Onde cresce o volume, crescem as costuras: entre
+    Operações e TI, entre sistemas que vieram de duas empresas, e entre o dado que nasce no chão e o
+    indicador que o comité olha.</b></p>
+    <p>A vaga de <b>Analista Administrativo JR (Key User do CLS)</b> pede exactamente o trabalho que
+    fecha essas costuras: transformar regras de negócio em rotinas documentadas, validadas e auditáveis.
+    Este documento mostra <b>seis costuras específicas</b>, como cada uma se prova, o que <b>não</b> sei
+    sobre cada uma — e uma proposta de 90 dias para as tratar.</p>
+  </div>
+
+  <div class="grid3">
+    <div class="card tint">
+      <div class="num">01</div>
+      <h4>Não é auditoria</h4>
+      <p>Nenhum sistema foi acedido. Tudo o que aqui afirma sobre a companhia vem de documentos públicos
+      e verificáveis.</p>
+    </div>
+    <div class="card tint">
+      <div class="num">02</div>
+      <h4>Não é ataque</h4>
+      <p>A palavra é <b>costura</b>: um ponto onde um processo tem de ser decidido por alguém, e esse
+      "alguém" não está no código.</p>
+    </div>
+    <div class="card tint">
+      <div class="num">03</div>
+      <h4>É executável</h4>
+      <p>A demonstração do método é código a correr: 8 regras versionadas, 9 normas com data de vigência,
+      25 testes a passar.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <p class="section-kicker">Acto 1 a 5</p>
+  <h2>A história que os números contam</h2>
+
+  <p class="lead">Uma empresa de logística portuária foi comprada por um fundo de infraestrutura,
+  passou por uma OPA, e recebeu um financiamento de 848 milhões para dobrar a capacidade de um terminal
+  enquanto, ao mesmo tempo, transformava a sua própria TI. É este o contexto em que a vaga foi aberta.</p>
+
+  <figure class="figure">
+    <img class="fig-light" src="assets/img/01-linha-do-tempo-da-operacao.png" alt="Linha do tempo da operação: compra, OPA, AGE, BNDES e Data Viz">
+    <img class="fig-dark" src="assets/img/01-linha-do-tempo-da-operacao-black.png" alt="Linha do tempo da operação: compra, OPA, AGE, BNDES e Data Viz (tema escuro)">
+    <figcaption><b>Figura 1.</b> Linha do tempo da operação, em duas fases: o ciclo societário
+    (2025) e o ciclo de investimento e dados (2026). Fonte: arquivo de RI (mziq), CVM RAD, edital de OPA
+    na B3, BNDES, comunicados da companhia. <span class="marker f">Facto verificado</span></figcaption>
+  </figure>
+
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Acto</th><th>O que aconteceu</th><th>Número</th><th>Leitura</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Venda à MSC</td>
+        <td>A MSC passa de 56,39% a 68,39% do capital, a R$ 17,50 por ação, com o preço definido por
+        laudo independente.</td>
+        <td><b>56,39% → 68,39%</b> · R$ 17,50/ação</td>
+        <td>A companhia deixa de ter controlo disperso. <span class="marker f">Facto</span></td>
+      </tr>
+      <tr>
+        <td>OPA unificada</td>
+        <td>Oferta pública unificada para as ações remanescentes, concluída em outubro.</td>
+        <td><b>97,65%</b> · R$ 18,53/ação</td>
+        <td>Quase totalidade do float sai do mercado. <span class="marker f">Facto</span></td>
+      </tr>
+      <tr>
+        <td>AGE — resgate</td>
+        <td>Assembleia de acionistas pediu a recompra das ações não negociadas.</td>
+        <td><b>R$ 18,84/ação</b></td>
+        <td>Preço de referência da companhia, já sem float relevante.
+        <span class="marker f">Facto</span></td>
+      </tr>
+      <tr>
+        <td>Laudo Apsis (base 31/12/2024)</td>
+        <td>Avaliação independente: DCF, VWAP de 3 meses e EV/EBITDA.</td>
+        <td>DCF <b>R$ 16,48</b> · VWAP-3M <b>R$ 17,08</b> · EV/EBITDA <b>6,55×</b></td>
+        <td>Preço pago ≈ 2,5% acima do laudo — compra a valor justo, não a prêmio de controlo.
+        <span class="marker f">Facto</span></td>
+      </tr>
+      <tr>
+        <td>Financiamento BNDES</td>
+        <td>Recursos para o Tecon Salvador, no âmbito do novo programa de investimento portuário.</td>
+        <td><b>R$ 848 milhões</b></td>
+        <td>Capex real, com desembolso e prazos. <span class="marker f">Facto</span></td>
+      </tr>
+      <tr>
+        <td>Expansão do Tecon</td>
+        <td>Capacidade de movimentação de contêineres.</td>
+        <td><b>553 mil → &gt; 1 milhão TEU/ano</b></td>
+        <td>Cerca de 70 → mais de 100 contêineres por hora.
+        <span class="marker f">Facto</span> <span class="marker i">Inf.</span></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <figure class="figure">
+    <img class="fig-light" src="assets/img/05-cadeia-do-capex-do-bndes.png" alt="Cadeia do capex do BNDES: do recurso ao TEU e ao processo que o suporta">
+    <img class="fig-dark" src="assets/img/05-cadeia-do-capex-do-bndes-black.png" alt="Cadeia do capex do BNDES (tema escuro)">
+    <figcaption><b>Figura 2.</b> A cadeia do capex: o recurso do BNDES só se transforma em volume se o
+    processo que o sustenta (documentação, validação, indicador) estiver certo. É aí que entra o trabalho
+    de Key User. <span class="marker i">Inferência</span></figcaption>
+  </figure>
+</section>
+
+<section>
+  <p class="section-kicker">Acto 3</p>
+  <h2>O stack que herda quem entra</h2>
+
+  <p class="lead">Uma empresa em crescimento e em processo de integração tem, tipicamente, mais de um
+  sistema para a mesma coisa. O layer operacional não é o mesmo que o layer analítico — e é aí que a
+  divergência começa.</p>
+
+  <figure class="figure">
+    <img class="fig-light" src="assets/img/04-camadas-do-stack-de-dados.png" alt="Camadas do stack de dados: operacional, transacional, analítico e consumo">
+    <img class="fig-dark" src="assets/img/04-camadas-do-stack-de-dados-black.png" alt="Camadas do stack de dados (tema escuro)">
+    <figcaption><b>Figura 3.</b> As camadas do stack. Tudo o que existe no operacional e não chega ao
+    analítico não aparece em nenhum relatório — e não é por falta de dado. <span class="marker i">Inferência</span></figcaption>
+  </figure>
+
+  <div class="pill-list">
+    <li>N4</li><li>TECSYS</li><li>SCOL</li><li>Portal B2B</li><li>SAP</li>
+    <li>Databricks</li><li>Redshift</li><li>Power BI</li><li>Zendesk</li><li>Salesforce</li>
+    <li>Looker Studio</li><li>Data Viz</li>
+  </div>
+
+  <p class="footnote">O programa <b>Data Viz</b> é a camada de padronização de visualização com
+  <b>Power BI</b> corporativo, e é o requisito explícito da vaga (<i>BI: Power BI, Looker Studio /
+  Data Studio</i>). A lista acima é o conjunto de sistemas nomeados em fontes públicas da companhia e
+  em instrumentos do BNDES; não é um inventário auditado do parque instalado.
+  <span class="marker i">Inferência</span></p>
+</section>
+
+<section>
+  <p class="section-kicker">O núcleo</p>
+  <h2>As seis costuras</h2>
+
+  <p class="lead">Cada costura é um ponto onde um processo tem de ser decidido por alguém e essa decisão
+  não está em código. São as seis que consigo sustentar com documento público — e, em cada uma, o que
+  <b>não</b> sei está escrito.</p>
+
+  <div class="grid2">
+    <div class="card tint">
+      <h4>C1 · A fronteira de decisão Rio–Salvador</h4>
+      <p>Decisões sobre o CLS tomadas no Rio; dados que nascem em Salvador. A regra existe, mas chega a
+      quem tem de aplicá-la já traduzida por terceiros.</p>
+    </div>
+    <div class="card tint">
+      <h4>C2 · A regra fora do código</h4>
+      <p>Regras de negócio — conferência de carga, exceções, prazos — documentadas em manuais e na cabeça
+      de quem opera, não em algo que se versiona e se testa.</p>
+    </div>
+    <div class="card tint">
+      <h4>C3 · O dado nasce fora do BI</h4>
+      <p>O evento que o comité quer contar é criado no chão, num terminal ou num CALL center. Se o
+      registro nasce depois do indicador, o indicador está sempre meio passo atrasado.</p>
+    </div>
+    <div class="card tint">
+      <h4>C4 · A janela pós-M&amp;A</h4>
+      <p>Dois conjuntos de processos, dois conjuntos de sistemas, uma janela de integração. Documentar
+      "sempre que houver mudança" é a tarefa que ninguém tem tempo para fazer e toda a gente precisa.</p>
+    </div>
+    <div class="card tint">
+      <h4>C5 · O capex antes da equipa de dados</h4>
+      <p>R$ 848 milhões de capacidade nova a entrar em produção enquanto a camada analítica ainda se
+      está a formar. A capacidade cresce mais rápido do que o registo do que nela acontece.</p>
+    </div>
+    <div class="card tint">
+      <h4>C6 · A concentração do conhecimento</h4>
+      <p>O conhecimento da operação está concentrado numa pessoa. A vaga existe porque essa pessoa está
+      ocupada — e o risco não é a pessoa, é o processo.</p>
+    </div>
+  </div>
+
+  <p class="footnote">Cada uma destas costuras tem, na página <a href="diagnostico.html">As costuras</a>,
+  o mesmo formato: <b>o que se observa</b>, <b>porque importa</b>, <b>como se prova</b>, <b>o que não
+  sei</b> e <b>o que faria</b>. As costuras são a hipótese de trabalho, não um diagnóstico confirmado.</p>
+</section>
+
+<section>
+  <p class="section-kicker">Como isto se lê</p>
+  <h2>A escada de leitura — e as regras do que não se diz</h2>
+
+  <p class="lead">Um documento para três públicos só funciona se cada um encontra, no mesmo sitio, o
+nível de detalhe que tem capacidade de ler. E só funciona se o sub-texto for coerente com o texto.</p>
+
+  <div class="grid3">
+    <div class="card">
+      <span class="chip rh">Nível 1 · RH · 30 s</span>
+      <h4>Leia a capa e o resumo</h4>
+      <p>Duas páginas. A pergunta que o RH precisa de responder: <b>a quem devo encaminhar isto?</b>
+      Resposta: à gestão do CLS e à gestão de TI.</p>
+    </div>
+    <div class="card">
+      <span class="chip g">Nível 2 · Gestor · 3 min</span>
+      <h4>Leia o diagnóstico e o plano</h4>
+      <p>Seis costuras, uma proposta de 90 dias, seis perguntas de decisão. O gestor não precisa de
+      crer em mim: precisa de decidir.</p>
+    </div>
+    <div class="card">
+      <span class="chip t">Nível 3 · Técnico · 15 min</span>
+      <h4>Leia o método e a evidência</h4>
+      <p>O motor de regras, os casos de fronteira, os 25 testes e a tabela de todos os números com a
+      fonte de cada um. É aqui que se vê se isto é verificável.</p>
+    </div>
+  </div>
+
+  <div class="callout amber">
+    <p class="lbl">As regras do que não se diz</p>
+    <p>Este documento é uma candidatura, e uma candidatura escolhe um ângulo. Três coisas ficam de
+    fora, de propósito — e é a forma de declarar que o que está aqui é o que está aqui:</p>
+    <p><b>1 · Nada sobre hipóteses internas de organização.</b> A companhia tem uma leitura possível
+    sobre si própria que eu não tenho obrigação de trazer para um primeiro contacto, e cuja leitura
+    errada me custaria a vaga sem me dar nada em troca. Escolhi o ângulo em que o meu trabalho é útil
+    e verificável: <b>processo e dados</b>. Se a companhia quiser discutir organização, é uma conversa
+    de 20 minutos — não um anexo de candidatura.</p>
+    <p><b>2 · Nada sobre "vulnerabilidades".</b> Não houve teste. Não houve acesso. Chamar a isto
+    vulnerabilidade seria tecnicamente falsa e comunicativamente um desastre. O que há é
+    <b>costuras</b>: pontos onde um processo exige uma decisão que não está escrita. Isso é
+    observação de estrutura, não ataque.</p>
+    <p><b>3 · Nada sobre pessoas que não consigo nomear.</b> Não há gestor individual identificado em
+    fonte pública verificada. Onde apareceria o nome de alguém, aparece o cargo. E, por isso mesmo,
+    as figuras deste site não têm nomes: têm camadas e fronteiras.</p>
+  </div>
+</section>
+
+<section>
+  <p class="section-kicker">O pedido</p>
+  <h2>O que eu preciso — e o que não preciso</h2>
+
+  <div class="grid2">
+    <div class="card green">
+      <span class="chip g">O que eu peço</span>
+      <h4>Três coisas, todas de uma vez</h4>
+      <p>1. Um café de 20 minutos com quem manda no CLS e com quem manda na TI.<br>
+      2. Acesso aos <b>6</b> processos que a vaga enumera, em qualquer estado de formalização.<br>
+      3. Uma sessão de 30 minutos com quem opera o terminal.</p>
+    </div>
+    <div class="card coral">
+      <span class="chip c">O que eu não preciso</span>
+      <h4>Nada disto</h4>
+      <p>Não preciso de um relatório de vulnerabilidades. Não preciso de acesso a sistemas. Não preciso
+      que testem a minha senioridade com um teste de Excel — o anúncio já me diz que ele existe, e é o
+      sítio onde eu apareço com a resposta pronta.</p>
+    </div>
+  </div>
+
+  <div class="callout green">
+    <p class="lbl">O que fica, se isto avançar</p>
+    <p>Uma peça que hoje não existe em lugar nenhum: <b>o registo do CLS</b> — os processos da operação
+    de Salvador escritos, versionados, com a regra de negócio ao lado do relatório que a consome, e um
+    registo de quem mudou o quê e quando. É o entregável de um Key User, e é também a forma mais
+    concreta de medir se os 90 dias valeram.</p>
+  </div>
+
+  <div class="nav-cards">
+    <a href="para-encaminhar.html"><span class="t">01 · RH · 2 páginas A4</span>
+      <h4>Resumo para encaminhar</h4>
+      <p>Documento autónomo, para o RH reencaminhar sem o candidato. Duas páginas A4 em impressão.</p></a>
+    <a href="diagnostico.html"><span class="t">02 · Diagnóstico</span>
+      <h4>As seis costuras</h4>
+      <p>Para cada uma: o que se observa, como se prova, o que não sei e o que faria.</p></a>
+    <a href="plano.html"><span class="t">03 · Plano</span>
+      <h4>90 dias em três fases</h4>
+      <p>O produto, as seis perguntas de decisão, a medição e o que precisa da companhia.</p></a>
+    <a href="evidencia.html"><span class="t">04 · Evidência</span>
+      <h4>Dados e limites</h4>
+      <p>Cada número com a sua fonte e o seu marcador. E a lista do que eu não sei.</p></a>
+    <a href="metodo.html"><span class="t">05 · Método</span>
+      <h4>Legislação como regra de negócio</h4>
+      <p>8 regras, 9 normas com data, 25 testes. O código a correr.</p></a>
+    <a href="assets/anexo-legislacao-como-regra-de-negocio.pdf"><span class="t">06 · Anexo · PDF</span>
+      <h4>Uma página para impressão</h4>
+      <p>A demonstração resumida, em A4, para deixar sobre a mesa ou anexar a um e-mail.</p></a>
+  </div>
+</section>
+
+<p class="footnote">Este documento não é recomendação de investimento, proposta comercial, nem auditoria
+técnica. Não houve acesso, teste ou observação de qualquer sistema da companhia. Os números de
+terceiros (BNDES, laudo Apsis, CVM, B3, RFB, Siscomex, CGIBS, MDIC/Camex) são públicos e estão
+identificados; os números que são inferência minha estão marcados como tal e a razão está escrita ao
+lado. Documento compilado a 27 de novembro de 2026.</p>
+</main>
+<footer class="site">
+  <p><strong>Wilson Sons — Leitura de terreno e proposta de 90 dias.</strong> Documento de candidatura,
+  produzido a partir de fontes públicas. Não é recomendação de investimento, proposta comercial, nem
+  auditoria técnica: nenhuma sistema da companhia foi acedido, testado ou observada.</p>
+  <p class="meta">Autor: Ivanir · Compilado em 27 de novembro de 2026 · Versão 1.0 ·
+  Fontes públicas: arquivo de RI (mziq), CVM RAD, edital de OPA (B3), laudo Apsis (31/12/2024),
+  BNDES, Receita Federal, Siscomex, CGIBS, MDIC/Camex, quadros de recrutamento (Gupy).</p>
+</footer>
+</div>
+</body>
+</html>

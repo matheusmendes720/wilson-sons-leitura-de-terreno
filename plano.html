@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Proposta de 90 dias para o registo dos processos do Centro Logístico de Salvador: o produto, três fases, seis perguntas de decisão, medição, o que precisa da companhia e os riscos.">
+<title>A proposta — Wilson Sons · Leitura de terreno</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="">
+<div class="shell">
+<header class="masthead">
+  <p class="eyebrow">Proposta · 90 dias · seis perguntas de decisão</p>
+  <h1>O registo do CLS, em noventa dias</h1>
+  <p class="lede">Não é uma consultoria nem um relatório. É <b>construir a coisa que faz um Key User existir</b>: os processos do Centro Logístico de Salvador escritos, versionados, com a regra de negócio ao lado do relatório que a consome, e um registo de quem mudou o quê e quando.</p>
+  <nav class="toc">
+    <a href="index.html">Leitura de terreno</a>
+    <a href="para-encaminhar.html">Resumo para encaminhar</a>
+    <a href="diagnostico.html">As costuras</a>
+    <a href="plano.html" aria-current="page">A proposta</a>
+    <a href="evidencia.html">Dados e limites</a>
+    <a href="metodo.html">O método</a>
+  </nav>
+</header>
+<main>
+<p class="readbar">
+  <span class="chip rh">Leitura de 3 min</span>
+  <span class="chip g">O gestor precisa de decidir seis coisas</span>
+  <span><b>Compromisso:</b> 90 dias, entregável verificável, e uma lista de coisas que só a companhia
+  pode decidir.</span>
+</p>
+
+<section>
+  <p class="section-kicker">O produto</p>
+  <h2>Observar → modelar → testar → escalar</h2>
+
+  <p class="lead">O trabalho tem uma forma, e a forma é a mesma em qualquer domínio — portuário,
+  financeiro ou industrial. É a mesma forma que já está aplicada na demonstração que acompanha este
+  documento.</p>
+
+  <ol class="steps">
+    <li>
+      <h4>Observar</h4>
+      <p>O processo como é, incluindo as excepções e o que se passa quando a regra falha. Fonte: quem
+      opera, não o manual. <b>Entregável:</b> narrativa do processo com os pontos de decisão assinalados.</p>
+    </li>
+    <li>
+      <h4>Modelar</h4>
+      <p>Cada decisão vira uma regra escrita, com a sua condição, a sua excepção e a sua origem. Onde a
+      regra não puder ser escrita, isso fica escrito como lacuna — e é uma entrega, não uma falha.
+      <b>Entregável:</b> catálogo de regras versionado.</p>
+    </li>
+    <li>
+      <h4>Testar</h4>
+      <p>Os casos de fronteira — a exceção, o simultâneo, o valor em branco, o processo mudado — viram
+      testes que correm. Uma regra que não foi testada é uma opinião.
+      <b>Entregável:</b> suíte de testes com os casos de fronteira.</p>
+    </li>
+    <li>
+      <h4>Escalar</h4>
+      <p>A regra liga-se ao indicador que consome e ao painel que já existe. Se ninguém consome, a
+      regra fica à espera — e isso é declarado. <b>Entregável:</b> regra ligada, em produção, com
+      dono.</p>
+    </li>
+  </ol>
+
+  <div class="callout">
+    <p class="lbl">Porque isto é um produto e não um relatório</p>
+    <p>Um relatório descreve o que está mal e sai. Um produto <b>fica a trabalhar</b>: quando a regra
+    muda, muda o código; quando o dado muda, muda o teste. É a diferença entre entregar uma opinião
+    sobre a operação e entregar uma peça que a operação usa todos os dias — que é exactamente o que
+    o<Key User> faz.</p>
+  </div>
+</section>
+
+<section>
+  <p class="section-kicker">Os 90 dias</p>
+  <h2>Três fases, com o que entra e o que sai</h2>
+
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Fase</th><th>Dias</th><th>O que acontece</th><th>O que fica</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><b>Fase 1 · Mapear</b></td>
+        <td>1–30</td>
+        <td>Os seis processos que o anúncio enumera, um a um. Quem decide o quê, em que sistema,
+        com que excepções. A cadeia de origem de um indicador do comité de eficiência
+        operacional.</td>
+        <td>Mapa de processos e de origem do dado · registo de decisões de regra · lacunas
+        declaradas</td>
+      </tr>
+      <tr>
+        <td><b>Fase 2 · Escrever e testar</b></td>
+        <td>31–60</td>
+        <td>As regras de cada processo escritas ao lado do relatório que as consome. Casos de
+        fronteira cobertos por teste. Revisão com quem opera — não com quem aprova.</td>
+        <td>Catálogo de regras versionado · suíte de testes · registo de mudanças</td>
+      </tr>
+      <tr>
+        <td><b>Fase 3 · Entregar e medir</b></td>
+        <td>61–90</td>
+        <td>Publicação do registo do CLS. Ligação das regras ao painel. Medição do antes/depois da
+        formalização. Lista do que fica por fazer, com o dono de cada item.</td>
+        <td>Registo do CLS publicado · regras ligadas em produção · medição · plano de continuação</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p class="footnote"><b>Critério de arranque de cada fase:</b> a fase seguinte só começa quando a
+  anterior tem um artefacto que outra pessoa consegue ler sem estar comigo na sala. Se isso não
+  acontecer, a fase não avançou — e o que faltou entra na lista do que fica por fazer. <b>Um plano que
+  não tem critério de paragem é uma intenção.</b></p>
+</section>
+
+<section>
+  <p class="section-kicker">Decisão</p>
+  <h2>As seis perguntas que só a companhia pode responder</h2>
+
+  <p class="lead">Estas são as perguntas cujo atraso trava o trabalho. Cada uma tem uma resposta que
+  muda o plano — e nenhuma delas exige orçamento.</p>
+
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>#</th><th>Pergunta</th><th>Para quem</th><th>O que muda na resposta</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><b>P1</b></td>
+        <td>Quais são, exactamente, os seis processos que a vaga menciona — e já estão nomeados
+        algures?</td>
+        <td>Gestão do CLS</td>
+        <td>Define o âmbito. Sem isto, a Fase 1 é um palpite de duas semanas — e adivinhares o âmbito é a forma
+        mais rápida de falhar um plano de 90 dias.</td>
+      </tr>
+      <tr>
+        <td><b>P2</b></td>
+        <td>Quem pode <b>aprovar</b> uma mudança de regra de processo, e em que sistema fica o registo
+        dessa aprovação?</td>
+        <td>Gestão do CLS + TI</td>
+        <td>Define se o registo de mudanças vive num documento meu ou num sistema da companhia. A
+        segunda opção é melhor e mais lenta.</td>
+      </tr>
+      <tr>
+        <td><b>P3</b></td>
+        <td>Que indicador do comité de eficiência operacional é o mais sensível a erro de registo?</td>
+        <td>Comitê de eficiência</td>
+        <td>Define a cadeia de origem que se escreve primeiro. Um indicador só, feito bem, vale mais
+        do que seis mal.</td>
+      </tr>
+      <tr>
+        <td><b>P4</b></td>
+        <td>O que é que já está formalizado — e o que está só na cabeça de quem opera?</td>
+        <td>Operação do CLS</td>
+        <td>Define o tamanho real do trabalho. Se estiver tudo formalizado, o meu papel passa a ser
+        de revisão e integração, e digo isso logo.</td>
+      </tr>
+      <tr>
+        <td><b>P5</b></td>
+        <td>Há um<Key User> hoje? O<Key User> é a pessoa que vai usar o registo, ou a pessoa que o
+        vai substituir?</td>
+        <td>TI</td>
+        <td>Define se o artefacto é um manual ou um sistema. E define a minha relação de trabalho com
+        a equipa — que é a parte que importa mais do que a tecnologia.</td>
+      </tr>
+      <tr>
+        <td><b>P6</b></td>
+        <td>A mudança de processo de 2025 (pós-M&amp;A) ainda está em curso, ou está consolidada?</td>
+        <td>Gestão do CLS</td>
+        <td>Define se o mapa de processos lado a lado ainda é útil, ou se o trabalho é já de
+        consolidação.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout amber">
+    <p class="lbl">A honestidade do plano</p>
+    <p>P1 a P6 são perguntas <b>de gestão</b>, não técnicas. Não se respondem com dados nem com
+    software: respondem-se com uma decisão. Se a resposta for "ainda não sei", isso é informação
+    válida e entra no plano como tal — mas significa que a Fase 1 é uma fase de <b>descoberta</b>, e
+    isso muda o que é realista entregar em 30 dias. <b>Prefiro dizer isto agora do que descobrir em
+    março.</b></p>
+  </div>
+</section>
+
+<section>
+  <p class="section-kicker">Medição</p>
+  <h2>Como se sabe se os 90 dias valeram</h2>
+
+  <div class="grid2">
+    <div class="card green">
+      <h4>Indicadores que dependem só de mim</h4>
+      <p><b>1.</b> Processos com regra escrita e versionada: de 0 para N<br>
+      <b>2.</b> Regras com teste de fronteira a passar: de 0 para M<br>
+      <b>3.</b> Mudanças de processo registadas com autor, data e regra afetada<br>
+      <b>4.</b> Indicadores do comité com cadeia de origem escrita<br>
+      <b>5.</b> Lacunas declaradas por escrito (o número de coisas que <i>não</i> sei)</p>
+    </div>
+    <div class="card">
+      <h4>Indicadores que dependem da companhia</h4>
+      <p><b>1.</b> Regras ligadas a um painel em produção<br>
+      <b>2.</b> Tempo de onboarding de alguém novo no CLS<br>
+      <b>3.</b> Incidentes de "a regra mudou e ninguém soube"<br>
+      <b>4.</b> Processos que deixou de ser perguntado à mesma pessoa<br>
+      <b>5.</b> Um segundo<Key User> capaz de manter o registo</p>
+    </div>
+  </div>
+
+  <p class="footnote">Os indicadores da esquerda são meus e são verificáveis por qualquer pessoa que
+  leia o registo. Os da direita só existem se a companhia os quiser medir — e é por isso que o pedido
+  inclui uma decisão explícita sobre quem os acompanha. <b>Um indicador que ninguém vai ver nunca
+  melhora.</b></p>
+</section>
+
+<section>
+  <p class="section-kicker">Dependências</p>
+  <h2>O que preciso da companhia — e o que não preciso</h2>
+
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Preciso</th><th>De quem</th><th>Quando</th><th>O que acontece se não vier</th></tr></thead>
+    <tbody>
+      <tr><td>Acesso de leitura aos 6 processos</td><td>Gestão do CLS</td><td>Semana 1</td>
+      <td>A Fase 1 atrasa-se. Não se inventa um âmbito.</td></tr>
+      <tr><td>1 sessão com quem opera</td><td>Operação do CLS</td><td>Semana 1</td>
+      <td>O mapa fica teórico. O trabalho perde o chão.</td></tr>
+      <tr><td>Um indicador do comité para traçar</td><td>Comitê de eficiência</td><td>Semana 2</td>
+      <td>A cadeia de origem fica genérica.</td></tr>
+      <tr><td>Revisão do que está escrito</td><td>Quem opera + gestor</td><td>Semanas 4–8</td>
+      <td>O registo fica por verificar — e isso é dito no próprio registo.</td></tr>
+      <tr><td>Um responsável pelo registo depois dos 90 dias</td><td>TI / CLS</td><td>Semana 12</td>
+      <td>Entrego o registo e fico sem ele. É um risco assumido, e está escrito.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <span class="chip">O que NÃO preciso</span>
+      <h4>Três coisas que economizam 3 semanas</h4>
+      <p>Não preciso de acesso a sistemas — o trabalho é documental e de método.<br>
+      Não preciso de um relatório de vulnerabilidades — não houve teste.<br>
+      Não preciso de um orçamento de ferramenta: o que uso já está instalado nesta máquina.</p>
+    </div>
+    <div class="card coral">
+      <span class="chip c">Riscos assumidos</span>
+      <h4>Três, escritos de propósito</h4>
+      <p><b>1.</b> O registo fica sem dono depois dos 90 dias — e o valor conquistado evapora.<br>
+      <b>2.</b> A formalização não substitui a presença de quem sabe: registar uma regra não faz o
+      registo bom.<br>
+      <b>3.</b> Se P1–P6 não tiverem resposta, o resultado é um diagnóstico, não um registo.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <p class="section-kicker">Porque é que isto serve à JR</p>
+  <h2>O encaixe, palavra por palavra</h2>
+
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>O que o anúncio pede</th><th>O que a proposta entrega</th></tr></thead>
+    <tbody>
+      <tr><td>Key User dos sistemas do CLS</td>
+      <td>Um registo do CLS com dono, versão e histórico de mudanças.</td></tr>
+      <tr><td>Interface entre Operações e TI</td>
+      <td>O registo de decisões de regra: a fronteira escrita, com o tradutor e a data.</td></tr>
+      <tr><td>Regras do negócio</td>
+      <td>O catálogo de regras versionado, com teste de fronteira.</td></tr>
+      <tr><td>Documentar os processos impactados sempre que houver mudança</td>
+      <td>O registo de mudanças: autor, data, regra afetada, o que mudou no relatório
+      correspondente.</td></tr>
+      <tr><td>Validação de processos</td>
+      <td>A suíte de testes, com os casos de fronteira e o registo do que foi validado.</td></tr>
+      <tr><td>Comitê de eficiência operacional</td>
+      <td>As cadeias de origem dos indicadores do comitê, escritas.</td></tr>
+      <tr><td>Excel e BI (Power BI, Looker)</td>
+      <td>A camada de origem dos indicadores — o que o Power BI consome e hoje não está escrito em
+      lado nenhum.</td></tr>
+      <tr><td>Rotinas administrativas, financeiras e operacionais</td>
+      <td>Os seis processos, na ordem em que a companhia os formalizar.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout green">
+    <p class="lbl">A nota que fica por baixo de tudo</p>
+    <p>Cada linha da tabela acima é uma frase do anúncio. <b>Não estou a propor um trabalho que tenhas
+    de me explicar — estou a propor a versão executável do trabalho que o anúncio já descreve.</b> É
+    essa a razão de a proposta não bring nada de novo: ela é o anúncio, com um plano e uma data.</p>
+  </div>
+</section>
+</main>
+<footer class="site">
+  <p><strong>Wilson Sons — Leitura de terreno e proposta de 90 dias.</strong> Documento de candidatura,
+  produzido a partir de fontes públicas. Não é recomendação de investimento, proposta comercial, nem
+  auditoria técnica: nenhuma sistema da companhia foi acedido, testado ou observada.</p>
+  <p class="meta">Autor: Ivanir · Compilado em 27 de novembro de 2026 · Versão 1.0 ·
+  Fontes públicas: arquivo de RI (mziq), CVM RAD, edital de OPA (B3), laudo Apsis (31/12/2024),
+  BNDES, Receita Federal, Siscomex, CGIBS, MDIC/Camex, quadros de recrutamento (Gupy).</p>
+</footer>
+</div>
+</body>
+</html>

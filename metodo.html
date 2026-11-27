@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="A demonstração técnica que acompanha a candidatura: um motor de regras executável com 8 regras versionadas, 9 normas com data de vigência, 25 testes e três casos de fronteira.">
+<title>O método — Wilson Sons · Leitura de terreno</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="">
+<div class="shell">
+<header class="masthead">
+  <p class="eyebrow">Método · legislação como regra de negócio · o código a correr</p>
+  <h1>Uma regra que muda, e o código que sabe</h1>
+  <p class="lede">Construí um motor de regras para o fluxo de importação: <b>8 regras versionadas</b>, ligadas a <b>9 normas</p>
+  <nav class="toc">
+    <a href="index.html">Leitura de terreno</a>
+    <a href="para-encaminhar.html">Resumo para encaminhar</a>
+    <a href="diagnostico.html">As costuras</a>
+    <a href="plano.html">A proposta</a>
+    <a href="evidencia.html">Dados e limites</a>
+    <a href="metodo.html" aria-current="page">O método</a>
+  </nav>
+</header>
+<main>
+<p class="readbar">
+  <span class="chip rh">Leitura de 2 min</span>
+  <span class="chip g">O gestor: leia "os três ganchos datados"</span>
+  <span class="chip t">O técnico: os downloads no fim da página</span>
+  <span><b>Estado verificado:</b> 25 de 25 testes a passar.</span>
+</p>
+
+<section>
+  <div class="callout">
+    <p class="lbl">O que esta demonstração é — e o que não é</p>
+    <p><b>É</b> um motor de regras executável: cada regra aponta para uma norma com data de vigência,
+    cada decisão cita a norma que a sustenta, e há testes para os casos de fronteira — incluindo o caso
+    em que a norma de referência foi revogada.</p>
+    <p><b>Não é</b> uma peça de auditoria nem de segurança, e não pretendo ter proficiência em legislação
+    aduaneira — não tenho, e dizê-lo numa entrevista seria mentira. É uma demonstração de <b>como entro
+    num domínio regulado a partir do zero</b>: mapeio as regras, versiono-as, cubro as fronteiras com
+    testes antes de as pôr a produzir.</p>
+  </div>
+</section>
+
+<section>
+  <p class="section-kicker">As regras</p>
+  <h2>Oito regras, nove normas, e uma que vigia as outras</h2>
+
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Regra</th><th>Pergunta que responde</th><th>Norma</th><th>Estado</th></tr></thead>
+    <tbody>
+      <tr><td><b>R01</b></td><td>Qual documento de registo é válido nesta data</td>
+      <td>PC-165-2024 · Cronograma DI</td><td><span class="marker f">Vigente</span></td></tr>
+      <tr><td><b>R02</b></td><td>É permitido registar a declaração antes da chegada da carga</td>
+      <td>PC-165-2024</td><td><span class="marker f">Vigente</span></td></tr>
+      <tr><td><b>R03</b></td><td>Prazo de saída da mercadoria registada antecipadamente</td>
+      <td>PC-165-2024</td><td><span class="marker f">Vigente</span></td></tr>
+      <tr><td><b>R04</b></td><td>Retificação da declaração e o seu efeito sobre o desembaraço</td>
+      <td>IN-680-2006</td><td><span class="marker f">Vigente</span></td></tr>
+      <tr><td><b>R05</b></td><td>Requisitos de efectividade do registo</td>
+      <td>PC-77-2018</td><td><span class="marker c">Revogada em 19/09/2024</span></td></tr>
+      <tr><td><b>R06</b></td><td>A NCM escolhida vigia na data do registo</td>
+      <td>GECEX-272-2021</td><td><span class="marker f">Vigente</span></td></tr>
+      <tr><td><b>R07</b></td><td>Layout do documento fiscal de IBS/CBS na importação</td>
+      <td>Ato Conjunto 4/2026</td><td><span class="marker f">Vigente</span></td></tr>
+      <tr><td><b>R08</b></td><td><b>A norma de referência da regra ainda está vigente?</b></td>
+      <td>PC-77-2018 / PC-165-2024</td><td><span class="marker a">Vigia a vigência</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout green">
+    <p class="lbl">R08 é a regra que vigia as outras</p>
+    <p>Toda a regra aponta para uma norma. A pergunta natural — <b>"e se essa norma mudar?"</b> — é
+    exactamente a pergunta que quase ninguém faz. R08 responde-a: verificando a vigência da norma de
+    referência de cada regra, e apontando a migração quando a norma foi revogada.</p>
+    <p>No caso real, R05 ainda se apoia na Portaria Coana nº 77/2018, <b>revogada em 19/09/2024</b> pela
+    Portaria Coana nº 165/2024. O motor não a apaga: <b>declara-a</b> e devolve <code>REVISAR</code>.
+    É a diferença entre um sistema que mente com confiança e um sistema que sabe o que não sabe.</p>
+  </div>
+</section>
+
+<section>
+  <p class="section-kicker">Os três casos</p>
+  <h2>O que o motor decide, e como</h2>
+
+  <p class="lead">Três operações, três resultados. O motor devolve sempre a regra que decidiu, a norma
+  que a sustenta e a data a partir da qual essa norma vigia.</p>
+
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Caso</th><th>Operação</th><th>Resultado</th><th>Porquê</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><b>A</b></td>
+        <td>Operação de rotina registada em DUIMP a 16/11/2026, saída dentro do prazo, NCM vigente.</td>
+        <td><b>REVISAR</b></td>
+        <td>Não é um erro: é a R08 a dizer que a R05 ainda se apoia numa norma revogada. A base de
+        regras tem de migrar.</td>
+      </tr>
+      <tr>
+        <td><b>B</b></td>
+        <td>O mesmo, mas registado em <b>DI</b> a 11/12/2026 — dois dias depois do desligamento.</td>
+        <td><b>BLOQUEIA</b></td>
+        <td>A DI foi desligada a 10/12/2026. O documento de registo não existe para esta data. O motor
+        bloqueia e cita o cronograma.</td>
+      </tr>
+      <tr>
+        <td><b>C</b></td>
+        <td>NCM <b>extinta em 2024</b> usada numa operação registada em 2026.</td>
+        <td><b>BLOQUEIA</b></td>
+        <td>A classificação não vigia na data do registo. O motor aponta a data de cessação e manda
+        reclassificar.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout">
+    <p class="lbl">Porque isto interessa a quem não é técnico</p>
+    <p>Repare no caso B. A operação é <b>perfeitamente legal</b> durante semanas e <b>de repente
+    deixa de existir</b>, sem que ninguém mude nada no processo. O único aviso é temporal. Um manual
+    escrito em 2024 está errado em dezembro de 2026, e ninguém vai reler o manual.</p>
+    <p>Um código com a data de vigência escrita <b>dentro da regra</b> não tem esse problema: ou o
+    processo trata a data, ou o motor diz que não trata — e alguém tem de decidir. <b>É isto que um
+    Key User faz num sistema transaccional: escreve a regra com a data dentro.</b></p>
+  </div>
+</section>
+
+<section>
+  <p class="section-kicker">O gancho</p>
+  <h2>Três datas que expiram — e por que isso prova o método</h2>
+
+  <div class="grid3">
+    <div class="card amber">
+      <div class="num">13</div>
+      <h4>dias</h4>
+      <p><b>A DI desliga a 10/12/2026.</b> O documento de registo de toda a cadeia muda de nome. O
+      cronograma (versão 30, de 13/11/2026) já está publicado.</p>
+    </div>
+    <div class="card amber">
+      <div class="num">17</div>
+      <h4>dias</h4>
+      <p><b>Ato Técnico Conjunto 11/2026, de 10/11/2026.</b> A documentação técnica da DUIMP foi
+      aprovada e publicada em 12/11 — há 15 dias.</p>
+    </div>
+    <div class="card amber">
+      <div class="num">35</div>
+      <h4>dias</h4>
+      <p><b>NF-e de IBS/CBS na importação via DUIMP: obrigatória a 01/01/2027.</b> O layout do
+      documento fiscal muda — e é a R07.</p>
+    </div>
+  </div>
+
+  <p class="lead" style="margin-top:20px">Estas três datas não são um argumento retórico: são a
+  <b>mesma mecânica</b> que o CLS vai precisar. Uma regra de processo que muda de nome, uma
+  especificação que é aprovada e entra em vigor, e um formato de documento que passa a ser obrigatório
+  — é o que acontece quando uma companhia integra duas empresas, ou quando um terminal dobra de
+  capacidade.</p>
+
+  <div class="callout amber">
+    <p class="lbl">A honestidade do gancho</p>
+    <p>Isto é uma demonstração <b>noutro domínio</b>, escolhida precisamente por ser um domínio
+    fechado, datado e verificável por qualquer pessoa com acesso ao Diário Oficial. Não estou a
+    dizer que o CLS tem um problema aduaneiro. Estou a dizer que <b>sei entrar num domínio regulado
+    sem o conhecer, e entrego-o executável e testado</b> — que é o que a vagueta pede quando pede
+    "proficiência em regras de negócio".</p>
+  </div>
+</section>
+
+<section>
+  <p class="section-kicker">A ponte</p>
+  <h2>Do fluxo de importação ao Centro Logístico</h2>
+
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>No motor de importação</th><th>No CLS</th></tr></thead>
+    <tbody>
+      <tr><td>Norma com data de vigência</td><td>Instrução de operação com data de vigência e
+      histórico de alterações</td></tr>
+      <tr><td>Regra versionada</td><td>Regra de negócio do processo, versionada no registo do CLS</td></tr>
+      <tr><td>Teste de fronteira</td><td>Teste de validação do processo — a exceção, o simultâneo, o
+      valor em branco</td></tr>
+      <tr><td>Regra que vigia a vigência (R08)</td><td>Regra que avisa quando um procedimento mudou e o
+      registo não acompanhou</td></tr>
+      <tr><td>Decisão que cita a fonte</td><td>Cada linha do registo com a origem da regra</td></tr>
+      <tr><td>REVISAR quando não sabe</td><td>Lacuna declarada por escrito, com o dono</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout green">
+    <p class="lbl">A frase para a entrevista, se a houver</p>
+    <p>«Não sou despachante e não vou fingir que sou. O que faço todos os dias é o que a vaga pede na
+    prática: transformar uma regra — legal, contratual ou de processo — em algo executável, testável e
+    auditável. Quando chego a um domínio que não conheço, o que faço é mapear as regras, versioná-las e
+    cobrir os casos de fronteira com testes antes de as pôr a produzir. Trouxe um exemplo feito para a
+    vossa área: <b>em vez de descrever, mostro.</b>»</p>
+  </div>
+</section>
+
+<section>
+  <p class="section-kicker">Downloads</p>
+  <h2>O código, para quem quiser ver</h2>
+
+  <p class="lead">Isto não é um anexo decorativo: é o motor a correr, com os testes a passar. Se lhe
+  interessar, está aqui — e o catálogo das regras é <b>gerado a partir do código</b>, o que significa que
+  não há manutenção paralela e logo não há divergência possível entre o que se documenta e o que se
+  aplica.</p>
+
+  <div class="nav-cards">
+    <a href="assets/catalogo_regras.md"><span class="t">Documento</span>
+      <h4>Catálogo das regras</h4>
+      <p>As 8 regras, as 9 normas, datas de vigência e fontes. Gerado do código.</p></a>
+    <a href="assets/regras.py"><span class="t">Código</span>
+      <h4>regras.py</h4>
+      <p>O motor: as regras, a resolução das normas e o cálculo da decisão.</p></a>
+    <a href="assets/test_regras.py"><span class="t">Testes</span>
+      <h4>test_regras.py</h4>
+      <p>25 casos, incluindo as datas em que a regra muda. 25/25 a passar.</p></a>
+    <a href="assets/anexo-legislacao-como-regra-de-negocio.pdf"><span class="t">PDF · A4</span>
+      <h4>Anexo de uma página</h4>
+      <p>A demonstração resumida, em A4, para deixar sobre a mesa ou anexar a um e-mail.</p></a>
+  </div>
+
+  <p class="footnote">Como correr, se quiserem ver antes de acreditar:
+  <code>python3 -m unittest test_regras</code> (25 testes) e <code>python3 demo.py</code> (os três
+  casos). Sem dependências externas, sem rede, sem base de dados. <b>Se o código precisar de um
+  ambiente instalado para correr, é porque não está pronto — e este corre em qualquer máquina com
+  Python.</b></p>
+</section>
+</main>
+<footer class="site">
+  <p><strong>Wilson Sons — Leitura de terreno e proposta de 90 dias.</strong> Documento de candidatura,
+  produzido a partir de fontes públicas. Não é recomendação de investimento, proposta comercial, nem
+  auditoria técnica: nenhuma sistema da companhia foi acedido, testado ou observada.</p>
+  <p class="meta">Autor: Ivanir · Compilado em 27 de novembro de 2026 · Versão 1.0 ·
+  Fontes públicas: arquivo de RI (mziq), CVM RAD, edital de OPA (B3), laudo Apsis (31/12/2024),
+  BNDES, Receita Federal, Siscomex, CGIBS, MDIC/Camex, quadros de recrutamento (Gupy).</p>
+</footer>
+</div>
+</body>
+</html>

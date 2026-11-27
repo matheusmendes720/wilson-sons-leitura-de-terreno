@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Anatomia de seis costuras de processo e dados pós-M&A na Wilson Sons: o que se observa, porque importa, como se prova, o que não se sabe e o que faria.">
+<title>As costuras — Wilson Sons · Leitura de terreno</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="">
+<div class="shell">
+<header class="masthead">
+  <p class="eyebrow">Diagnóstico · seis costuras · leitura de gestor e técnico</p>
+  <h1>Seis costuras, seis anatomias</h1>
+  <p class="lede">Cada costura é aberta do mesmo jeito: <b>o que se observa</b>, <b>porque importa</b>, <b>como se prova</b>, <b>o que não sabemos</b> e <b>o que faria</b>. A quarta pergunta é a mais importante: um diagnóstico que só sabe o que sabe é um panfleto.</p>
+  <nav class="toc">
+    <a href="index.html">Leitura de terreno</a>
+    <a href="para-encaminhar.html">Resumo para encaminhar</a>
+    <a href="diagnostico.html" aria-current="page">As costuras</a>
+    <a href="plano.html">A proposta</a>
+    <a href="evidencia.html">Dados e limites</a>
+    <a href="metodo.html">O método</a>
+  </nav>
+</header>
+<main>
+<p class="readbar">
+  <span class="chip rh">Leitura de 3 min</span>
+  <span class="chip g">Gestor: leia os blocos "o que faria"</span>
+  <span class="chip t">Técnico: leia "como se prova" e "o que não sabemos"</span>
+  <span><b>Regra do documento:</b> onde não há base, está escrito que não há.</span>
+</p>
+
+<section>
+  <div class="callout">
+    <p class="lbl">A definição que vai ser usada em todo o documento</p>
+    <p><b>Costura</b> é o ponto de um processo em que é preciso decidir, e essa decisão não está
+    escrita em nenhum sítio que se possa versionar, testar ou auditar.</p>
+    <p>Não é falha. A maior parte das operações funciona exactamente assim — e é por isso que
+    funciona. A costura só se torna problema quando a pessoa que decide não está no lugar, ou quando
+    o volume cresce mais depressa do que a capacidade de documentar. <b>É esse o caso do Tecon
+    Salvador.</b></p>
+  </div>
+</section>
+
+<section>
+  <p class="section-kicker">C1</p>
+  <h2>A fronteira de decisão Rio–Salvador</h2>
+  <dl class="terms">
+    <dt>O que se observa</dt>
+    <dd>A frente de dados corporativa da companhia vive no Rio de Janeiro; a operação que produz os
+    dados vive em Salvador, no Centro Logístico. O anúncio da vaga é explícito quanto a isto: a
+    posição é a <b>interface entre Operações e TI</b>, e o<Key User> é dos sistemas do CLS.</dd>
+
+    <dt>Porque importa</dt>
+    <dd>Toda a regra que chega à operação chega <b>já traduzida</b> por outra pessoa. A tradução não
+    fica registada em nenhum sítio: fica na conversa, no e-mail, na reunião. Quando a regra muda, a
+    conversa não muda sozinha — e a diferença entre a regra que está no papel e a regra que está a ser
+    aplicada em Salvador é invisível até aparecer um erro.</dd>
+
+    <dt>Como se prova</dt>
+    <dd>Documentalmente: o anúncio descreve a fronteira (Operações ↔ TI, CLS). A geografia das camadas
+    de TI (Rio para a frente de dados, Salvador para a unidade) está anotada no diagrama de stack.
+    <span class="marker f">Facto (público)</span> <span class="marker i">Inferência (a costura)</span></dd>
+
+    <dt>O que não sabemos</dt>
+    <dd>Quantas decisões passam por esta fronteira por mês; se existe um registo de tradução; quem
+    aprova uma mudança de regra; se a tradução é sempre de Rio para Salvador ou também no sentido
+    inverso. <b>Nenhuma destas coisas é visível em fonte pública.</b></dd>
+
+    <dt>O que faria</dt>
+    <dd>Um <b>registo de decisões de regra</b>: uma tabela com a regra, a origem, a data, o tradutor e o
+    que muda para quem executa. Nasce em 48 horas e é o primeiro entregável do plano de 90 dias.</dd>
+  </dl>
+</section>
+
+<section>
+  <p class="section-kicker">C2</p>
+  <h2>A regra fora do código</h2>
+  <dl class="terms">
+    <dt>O que se observa</dt>
+    <dd>O anúncio pede, literalmente, <b>"regras do negócio"</b> e <b>"documentar os processos impactados
+    sempre que houver mudança"</b>. É o enunciado, na propia vacancy, de que existem processos com
+    regras que precisam de ser documentadas — e de que a documentação não acompanha as mudanças.</dd>
+
+    <dt>Porque importa</dt>
+    <dd>Uma regra que só existe na cabeça de quem a aplica é: não é transferível, não é auditável, não
+    é testável, e não sobrevive à pessoa. Quando o volume dobra, a pergunta deixa de ser "a regra está
+    certa?" e passa a ser "quem é que aplica a regra quando a pessoa que a conhecia está de férias?".</dd>
+
+    <dt>Como se prova</dt>
+    <dd>É a única das seis costuras que a <b>fonte primária é o próprio anúncio da vaga</b>. Não é
+    inferência minha: é o texto da empresa a descrever o trabalho. <span class="marker f">Facto</span></dd>
+
+    <dt>O que não sabemos</dt>
+    <dd>Quantos dos processos estão hoje formalizados e quantos não; se existe man paper ou wiki; se
+    as mudanças de processo são comunicadas por e-mail, por reunião ou não são comunicadas. Não sei
+    também se "documentar" significa aqui <b>escrever texto</b> ou <b>escrever algo executável</b> — e
+    esta distinção é a diferença entre um terceiro de KEY USER e um terceiro de TI.</dd>
+
+    <dt>O que faria</dt>
+    <dd>Escrever a regra <b>ao lado do relatório que a consome</b>, versionada, com teste — não como
+    manual. É a demonstração que já está pronta, e é a forma como se mostra competência sem discurso.</dd>
+  </dl>
+</section>
+
+<section>
+  <p class="section-kicker">C3</p>
+  <h2>O dado nasce fora do BI</h2>
+  <dl class="terms">
+    <dt>O que se observa</dt>
+    <dd>A camada analítica é <b>construída</b> (Data Viz, Power BI corporativo, catálogo e política de
+    dados) e é onde a companhia investiu. O dado que a alimenta, porém, nasce no chão de produção: no
+    pátio, no gate, no call center. Entre uns e outros há sistemas transacionais (SAP, N4, TECSYS,
+    SCOL) e uma plataforma de integração.</dd>
+
+    <dt>Porque importa</dt>
+    <dd>O indicador que o comité de eficiência operacional olha é sempre uma <b>transformação do
+    evento</b>. Se o evento nasce depois do indicador, ou entra com granularidade diferente da que o
+    indicador assume, o painel está sempre meio passo atrás — e o debate passa a ser sobre o número, não
+    sobre a operação.</dd>
+
+    <dt>Como se prova</dt>
+    <dd>O stack é público (fontes da companhia, instrumentos do BNDES, comunicações de investimento).
+    A assimetria entre camadas é leitura minha sobre essa estrutura. <span class="marker f">Facto
+    (stack)</span> <span class="marker i">Inferência (a divergência)</span></dd>
+
+    <dt>O que não sabemos</dt>
+    <dd>Qual é a latência real entre o evento no pátio e o número no painel; se há reconciliação
+    automática ou manual; quais são os indicadores do comité de eficiência operacional e com que
+    periodicidade são revistos. <b>Não sei se existe uma fonte única de verdade para a
+    produtividade.</b></dd>
+
+    <dt>O que faria</dt>
+    <dd>Escolher <b>um</b> indicador do comité e fazer a sua cadeia de origem: evento → sistema → campo
+    → transformação → painel. Uma cadeia, feita ao contrário a partir do número, é o teste mais
+    barato de qualidade de dados que existe — e é o que se propõe para o dia 15.</dd>
+  </dl>
+</section>
+
+<section>
+  <p class="section-kicker">C4</p>
+  <h2>A janela pós-M&amp;A</h2>
+  <dl class="terms">
+    <dt>O que se observa</dt>
+    <dd>Em 2025 a companhia vendeu-se a si mesma: a MSC passou de 56,39% para 68,39% do capital a
+    R$ 17,50/ação, houve OPA unificada a R$ 18,53, resgate por AGE a R$ 18,84, e o registro na CVM foi
+    cancelado em dezembro. A estructura de controlos é nova; os processos, na maior parte, são os de
+    antes.</dd>
+
+    <dt>Porque importa</dt>
+    <dd>Toda a integração cria, por um tempo, um mapa de processos <b>duplo</b>: o do antes e o do
+    depois, lado a lado, a funcionar em paralelo. Cada equipa documenta o seu lado. A bridge entre os
+    dois — que é a parte que ninguém tem, porque ninguém tem tempo — é exactamente onde nasce a
+    divergência silenciosa.</dd>
+
+    <dt>Como se prova</dt>
+    <dd>Público e documentado: arquivo de RI, CVM RAD, edital de OPA na B3, laudo Apsis. É o único
+    bloco de factos do documento com fonte primária integral. <span class="marker f">Facto</span></dd>
+
+    <dt>O que não sabemos</dt>
+    <dd>Que processos foram já harmonizados e quais ainda correm em paralelo; se há um inventário de
+    processos a nível de grupo; se o<Key User> do CLS participa ou participa pouco na harmonização. Não
+    sei se a integração formal já aconteceu ou ainda está a acontecer.</dd>
+
+    <dt>O que faria</dt>
+    <dd>Um <b>mapa de processos lado a lado</b>, com as duas colunas e as diferenças assinaladas. Não
+    para decidir o que é certo — para tornar visível onde as duas colunas divergem. É um artefacto de
+    uma tarde, e é o que permite a alguém acima tomar uma decisão com clareza.</dd>
+  </dl>
+</section>
+
+<section>
+  <p class="section-kicker">C5</p>
+  <h2>O capex antes da equipa de dados</h2>
+  <dl class="terms">
+    <dt>O que se observa</dt>
+    <dd>R$ 848 milhões do BNDES no Tecon Salvador: 553 mil para mais de 1 milhão de TEU por ano, 70 para
+    mais de 100 contêineres por hora, WMS integrado ao TOS, gate digitalizado, dashboards em tempo
+    real. A capacidade nova é pública e financiada. A camada de dados é <b>programa</b> (Data Viz,
+    política de dados de 2024), não estrutura.</dd>
+
+    <dt>Porque importa</dt>
+    <dd>Quando a capacidade dobra e a equipa de registo não dobra, a diferença não aparece como
+    erro — aparece como <b>histórico que não se pode comparar</b>. Um pátio com o dobro de capacidade,
+    com sistemas novos e com um painel que evoluiu por incremento, não tem um antes/depois que se possa
+    defender. A medição do investimento fica dependente de memória.</dd>
+
+    <dt>Como se prova</dt>
+    <dd>Financiamento, capacidade e metas: fonte BNDES e resultados da companhia. A leitura da
+    assimetria entre as duas taxas — capacidade a crescer, formalização a formalizar-se — é minha.
+    <span class="marker f">Facto (números)</span> <span class="marker i">Inferência (a assimetria)</span></dd>
+
+    <dt>O que não sabemos</dt>
+    <dd>Quando é que cada parte da capacidade entra em operação; se há indicador de capacidade já
+    definido e versionado; qual é o plano de medição do antes/depois; quem é o responsável por ele.
+    <b>Não sei se a medição do investimento já foi desenhada.</b></dd>
+
+    <dt>O que faria</dt>
+    <dd>Um <b>baseline antes de 2027</b>: a capacidade, a produtividade e os indicadores do CLS
+    registados como estão hoje, com data. Sem ele, a comparação que o investimento vai exigir não tem
+    contra o que ser feita.</dd>
+  </dl>
+</section>
+
+<section>
+  <p class="section-kicker">C6</p>
+  <h2>A concentração do conhecimento</h2>
+  <dl class="terms">
+    <dt>O que se observa</dt>
+    <dd>A vaga existe, e o anúncio descreve um<Key User> dos sistemas do CLS. Uma posição de Key User
+    existe tipicamente porque há um sistema e há conhecimento — e o conhecimento está mais concentrado
+    do que a formalized. Há ainda a menção a um <b>comitê de eficiência operacional</b>: existe uma
+    instância que decide sobre eficiência e uma pessoa que a alimenta.</dd>
+
+    <dt>Porque importa</dt>
+    <dd>A concentração não é o problema — é o sintoma. O problema é que o processo não tem um sítio
+    onde a regra viva, e por isso depende de quem está disponível. Um Key User não é alguém que
+    "segura a informação": é alguém que <b>transforma a informação em regra formal</b>, e é isso que
+    a vaga pede.</dd>
+
+    <dt>Como se prova</dt>
+    <dd>O anúncio descreve a posição, o comitê e a exigência de documentar a cada mudança.
+    <span class="marker f">Facto (anúncio)</span> <span class="marker i">Inferência (a leitura de
+    concentração)</span></dd>
+
+    <dt>O que não sabemos</dt>
+    <dd>Quantas pessoas conhecem as regras do CLS; se há rotação; se o<Key User> atual está em funções
+    ou é o único; quanto tempo leva alguém novo a ser produtivo no CLS. <b>Não sei nada disto — e é
+    uma das primeiras perguntas que o encontro de 20 minutos tem de responder.</b></dd>
+
+    <dt>O que faria</dt>
+    <dd>Nada de tecnologia no primeiro dia. <b>Uma sessão de 30 minutos com quem opera o terminal</b>,
+    gravada em notas: o que corre mal, o que se pede a alguém que não está, o que ninguém sabe de
+    certeza. É o insumo mais valioso que existe e o mais difícil de obter por outro caminho.</dd>
+  </dl>
+</section>
+
+<hr>
+
+<section>
+  <p class="section-kicker">Leitura transversal</p>
+  <h2>As seis costuras em uma frase</h2>
+
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Costura</th><th>Fonte primária</th><th>Confiança</th><th>Custo de testar</th></tr></thead>
+    <tbody>
+      <tr><td>C1 · Fronteira de decisão</td><td>Anúncio da vaga + estrutura pública</td>
+      <td><span class="marker i">Média</span></td><td>Baixo — 1 reunião</td></tr>
+      <tr><td>C2 · Regra fora do código</td><td><b>Texto do próprio anúncio</b></td>
+      <td><span class="marker f">Alta</span></td><td>Baixo — ver os 6 processos</td></tr>
+      <tr><td>C3 · Dado nasce fora do BI</td><td>Stack público + layers documentadas</td>
+      <td><span class="marker i">Média</span></td><td>Médio — escolher 1 indicador</td></tr>
+      <tr><td>C4 · Janela pós-M&amp;A</td><td>CVM, B3, RI, laudo Apsis</td>
+      <td><span class="marker f">Alta nos factos</span></td><td>Baixo — 1 mapa</td></tr>
+      <tr><td>C5 · Capex antes da equipa</td><td>BNDES + resultados</td>
+      <td><span class="marker f">Alta nos factos</span></td><td>Baixo — baseline</td></tr>
+      <tr><td>C6 · Concentração</td><td>Anúncio (posição + comitê)</td>
+      <td><span class="marker i">Média</span></td><td>Baixo — 1 sessão</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout amber">
+    <p class="lbl">O limite honesto deste diagnóstico</p>
+    <p>As seis costuras são <b>hipóteses de trabalho bem fundamentadas</b>, não um diagnóstico
+    confirmado. Duas delas (C2 e C4) apoiam-se em factos primários; uma (C6) apoia-se na estrutura da
+    própria vaga; três são leituras minhas sobre estrutura pública. Nenhuma foi confirmada com quem
+    está dentro da operação — porque isso exige acesso, e acesso não houve nem foi pedido.</p>
+    <p>O que muda se uma estiver errada? Nada do que importa: o trabalho pedido — mapear, escrever a
+    regra, testá-la, registar a mudança — é o mesmo se houver cinco costuras ou sete. <b>As costuras
+    servem para mostrar que se leu; o plano serve para entregar.</b></p>
+  </div>
+</section>
+</main>
+<footer class="site">
+  <p><strong>Wilson Sons — Leitura de terreno e proposta de 90 dias.</strong> Documento de candidatura,
+  produzido a partir de fontes públicas. Não é recomendação de investimento, proposta comercial, nem
+  auditoria técnica: nenhuma sistema da companhia foi acedido, testado ou observada.</p>
+  <p class="meta">Autor: Ivanir · Compilado em 27 de novembro de 2026 · Versão 1.0 ·
+  Fontes públicas: arquivo de RI (mziq), CVM RAD, edital de OPA (B3), laudo Apsis (31/12/2024),
+  BNDES, Receita Federal, Siscomex, CGIBS, MDIC/Camex, quadros de recrutamento (Gupy).</p>
+</footer>
+</div>
+</body>
+</html>
