@@ -1,5 +1,9 @@
 # Wilson Sons — Leitura de terreno e proposta de 90 dias
 
+> **Publicado em 27/11/2026 (v1.1):** `https://matheusmendes720.github.io/wilson-sons-leitura-de-terreno/`
+> — **13/13 URLs a 200** verificadas. Esta pasta é a cópia local do que está publicado; a v1.1 republica o
+> HTML corrigido e regenera os **14 PDFs A4** do zero (ver `anex/LEIA-ME.md` §9).
+
 Site estático, sem JavaScript, sem web fonts e sem pedidos externos. Abre com duplo clique ou
 publica directamente no GitHub Pages.
 
