@@ -23,7 +23,7 @@ Cada regra tem: um identificador, um enunciado, a norma que a sustenta, a vigên
 | `REVISAR` | há excepção ou hipótese que o motor não decide sozinho — e isso é declarado, não escondido |
 | `PERMITE` | a regra está satisfeita |
 
-## Normas usadas (todas verificadas na fonte)
+## Normas catalogadas (todas verificadas na fonte)
 
 | Norma | Publicada | Vigência | Fonte |
 |---|---|---|---|
@@ -37,10 +37,12 @@ Cada regra tem: um identificador, um enunciado, a norma que a sustenta, a vigên
 | `ATC-11-2026` — Ato Técnico Conjunto RFB/SUANA/CGIBS nº 11/2026 — documentação técnica da Duimp | 2026-11-10 | vigente desde 2026-11-12 | [https://cgibs.gov.br/atos-tecnicos-conjuntos](https://cgibs.gov.br/atos-tecnicos-conjuntos) |
 | `GECEX-272-2021` — Resolução Gecex nº 272/2021 — Nomenclatura Comum do Mercosul (NCM) e TEC | 2021-11-19 | vigente desde 2021-11-19 | [https://www.gov.br/mdic/pt-br/assuntos/camex/resolucoes/gecex/resolucoes](https://www.gov.br/mdic/pt-br/assuntos/camex/resolucoes/gecex/resolucoes) |
 
+**6** destas normas são citadas por uma regra. As outras **3** (PC-70-2022, SIS-020-2026, ATC-11-2026) estão catalogadas como contexto normativo — são consultadas por regra, mas não sustentam uma regra isolada. A distinção é gerada a partir do código, como o resto deste catálogo.
+
 ## Por que isto é a demonstração
 
-A vaga de Analista Aduaneiro pede *«proficiência acerca da legislação federal como regra de negócio»*. Isto é exactamente isso: um conjunto de regras versionadas, ligadas a normas com data, testadas nos casos de fronteira, e executadas por código — não por memória.
+A vaga-alvo pede *«documentar os processos impactados sempre que houver mudança»*. Isto é o mesmo trabalho, noutro domínio: regras versionadas, ligadas a normas com data, testadas nos casos de fronteira, e executadas por código — não por memória. O domínio (aduaneiro) não é o da companhia: é uma demonstração de método, não de assunto.
 
-E tem uma data no fim: **a DI desliga a 10/12/2026**. O documento de registo que toda a cadeia usava muda de nome em 24 dias, e a documentação técnica da Duimp foi aprovada por um Ato Técnico Conjunto de **10/11/2026** — há seis dias. Qualquer operação, base de dados e regra que não accompanies essa mudança quebra em December.
+E tem uma data no fim: **a DI desliga a 10/12/2026**. O documento de registo que toda a cadeia usava muda de nome em 13 dias, e a documentação técnica da Duimp foi aprovada por um Ato Técnico Conjunto de **10/11/2026** — há dezassete dias. Qualquer operação, base de dados e regra que não acompanha essa mudança quebra em dezembro.
 
 É esse o trabalho que a expansão do Tecon Salvador vai pedir: não 'usar o sistema', mas **fazer a regra virar sistema**, e mudar a regra quando ela muda.

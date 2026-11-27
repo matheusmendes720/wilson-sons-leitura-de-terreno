@@ -5,8 +5,9 @@ Ideia: um domínio regulado (aduaneiro) é um conjunto de REGRAS versionadas, ca
 ligada a uma NORMA com data de vigência. O motor não "sabe aduaneiro": ele sabe
 avaliar regras contra uma operação, e cada decisão sai com a norma que a sustenta.
 
-É esta a competência que a vaga de Analista Aduaneiro pede ("legislação federal como
-regra de negócio") e é esta que um dev sênior demonstra: entrar num domínio que não
+É esta a competência que a vaga-alvo pede ("documentar os processos impactados sempre
+que houver mudança", com a regra escrita ao lado do relatório que a consome) e é esta
+que um dev sênior demonstra: entrar num domínio que não
 conhece, modelar as regras, versioná-las, cobriu os casos de fronteira com testes
 antes de as pôr a produzir.
 
@@ -362,21 +363,32 @@ def catalogo_markdown() -> str:
         "| `REVISAR` | há excepção ou hipótese que o motor não decide sozinho — e isso é declarado, "
         "não escondido |",
         "| `PERMITE` | a regra está satisfeita |", "",
-        "## Normas usadas (todas verificadas na fonte)", "",
+        "## Normas catalogadas (todas verificadas na fonte)", "",
         "| Norma | Publicada | Vigência | Fonte |", "|---|---|---|---|",
     ]
     for n in NORMAS.values():
         linhas.append(f"| `{n.id}` — {n.titulo} | {n.publicada_em.isoformat()} | {n.rotulo_vigencia()} | "
                       f"[{n.url}]({n.url}) |")
+    citadas = set()
+    for _rid, _enunciado, _fonte, _fn in REGRAS:
+        citadas.update(n for n in NORMAS if n in _fonte)
+    contexto = [n.id for n in NORMAS.values() if n.id not in citadas]
+    linhas += [
+        "", f"**{len(citadas)}** destas normas são citadas por uma regra. As outras "
+        f"**{len(contexto)}** ({', '.join(contexto)}) estão catalogadas como contexto "
+        "normativo — são consultadas por regra, mas não sustentam uma regra isolada. "
+        "A distinção é gerada a partir do código, como o resto deste catálogo.",
+    ]
     linhas += [
         "", "## Por que isto é a demonstração", "",
-        "A vaga de Analista Aduaneiro pede *«proficiência acerca da legislação federal como regra de "
-        "negócio»*. Isto é exactamente isso: um conjunto de regras versionadas, ligadas a normas com "
-        "data, testadas nos casos de fronteira, e executadas por código — não por memória.", "",
+        "A vaga-alvo pede *«documentar os processos impactados sempre que houver mudança»*. Isto é "
+        "o mesmo trabalho, noutro domínio: regras versionadas, ligadas a normas com data, testadas nos "
+        "casos de fronteira, e executadas por código — não por memória. O domínio (aduaneiro) não é o "
+        "da companhia: é uma demonstração de método, não de assunto.", "",
         "E tem uma data no fim: **a DI desliga a 10/12/2026**. O documento de registo que toda a "
-        "cadeia usava muda de nome em 24 dias, e a documentação técnica da Duimp foi aprovada por um "
-        "Ato Técnico Conjunto de **10/11/2026** — há seis dias. Qualquer operação, base de dados e "
-        "regra que não accompanies essa mudança quebra em December.", "",
+        "cadeia usava muda de nome em 13 dias, e a documentação técnica da Duimp foi aprovada por um "
+        "Ato Técnico Conjunto de **10/11/2026** — há dezassete dias. Qualquer operação, base de dados e "
+        "regra que não acompanha essa mudança quebra em dezembro.", "",
         "É esse o trabalho que a expansão do Tecon Salvador vai pedir: não 'usar o sistema', mas "
         "**fazer a regra virar sistema**, e mudar a regra quando ela muda.", "",
     ]
